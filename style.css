@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #101b2b;
+    color: #f3f5f8;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: #a9e4c2;
+    text-decoration: none;
+}
+
+/* Navigation */
+header {
+    background: #17253a;
+    padding: 15px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-btn {
+    display: none;
+    padding: 6px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Common sections */
+section {
+    padding: 65px 8%;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.highlight,
+h1 span {
+    color: #a9e4c2;
+}
+
+/* Home section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 480px;
+}
+
+.home div {
+    max-width: 600px;
+}
+
+.home img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: #a9e4c2;
+    color: #101b2b;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* Skills */
+.skills,
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.skill,
+.project {
+    flex: 1 1 200px;
+    padding: 20px;
+    background: #17253a;
+    border: 1px solid #304158;
+    border-radius: 8px;
+}
+
+.skill {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project h3 {
+    color: #a9e4c2;
+}
+
+/* Footer */
+footer {
+    padding: 20px 8%;
+    text-align: center;
+    border-top: 1px solid #304158;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .home img {
+        width: 200px;
+        height: 200px;
+        align-self: center;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}
